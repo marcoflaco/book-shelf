@@ -10,19 +10,19 @@ app.get('/', function(request, response) {
   // response.sendFile(__dirname + '/index.html');
 });
 
-app.get('/book1', function(request, response) {
-  console.log('Requesting contact page....');
-  response.send(pug.renderFile(__dirname + '/views/book1.pug', {}));
+app.get('/thelord', function(request, response) {
+  console.log('Requesting lord page....');
+  response.send(pug.renderFile(__dirname + '/views/thelord.pug', {}));
 });
 
-app.get('/book2', function(request, response) {
+app.get('/the-twilight', function(request, response) {
   console.log('Requesting contact page....');
-  response.send(pug.renderFile(__dirname + '/views/book2.pug', {}));
+  response.send(pug.renderFile(__dirname + '/views/the-twilight.pug', {book: foundBook));
 });
 
-app.get('/book1', function(request, response) {
+app.get('/im', function(request, response) {
   console.log('Requesting contact page....');
-  response.send(pug.renderFile(__dirname + '/views/book3.pug', {}));
+  response.send(pug.renderFile(__dirname + '/views/im.pug', {}));
 });
 
 app.listen(3000, function() {
